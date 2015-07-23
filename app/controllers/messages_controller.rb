@@ -4,6 +4,10 @@ class MessagesController < ApplicationController
     @message = Message.new
   end
   
+  def edit
+    
+  end
+  
   def create
     @message = Message.new(message_params)
     if @message.save
@@ -13,6 +17,14 @@ class MessagesController < ApplicationController
       flash.now[:alert] = "メッセージの保存に失敗しました。"
       render 'index'
     end
+  end
+  
+  def update
+    
+  end
+  
+  def destroy
+    
   end
   
   private
